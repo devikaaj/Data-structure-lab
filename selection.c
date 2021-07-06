@@ -8,14 +8,14 @@ int main()
 	   scanf("%d", &n);
 	   printf(" Enter the elements: ");
 	   for (i = 0; i < n; i++) 
-       	scanf("%d", &arr[i]);
+       	   scanf("%d", &arr[i]);
 	   printf(" The array before sorting:\n");
 	   for (i = 0; i < n; i++)
-		      printf(" %d  ", arr[i]);
-    selection_sort(arr,n);
-    printf("\n Array after sorting: \n");
-	  for (i = 0; i < n; i++)
-		     printf(" %d  ", arr[i]);
+		  printf(" %d  ", arr[i]);
+           selection_sort(arr,n);
+           printf("\n Array after sorting: \n");
+	   for (i = 0; i < n; i++)
+		  printf(" %d  ", arr[i]);
 }
 
 int smallest(int arr[], int k, int n) 
@@ -25,23 +25,24 @@ int smallest(int arr[], int k, int n)
 	  pos = k;
    for (j=k+1;j<n;j++) 
    {
-	   	if ( arr[j]<small) 
-      {
-			     small = arr[j];
-			     pos = j;
-		   }
-  	}
-	 return pos;
+	 if ( arr[j]<small) 
+            
+            {
+	       small = arr[j];
+	       pos = j;
+	    }
+   }
+   return pos;
 }
 int selection_sort(int arr[], int n) 
 {
   	int k, pos, temp;
-	 for (k = 0; k < n; k++) 
-   {
-		   pos = smallest(arr, k, n);
-	    	temp = arr[k];
-	   	arr[k] = arr[pos];
-	   	arr[pos] = temp;
+	for (k = 0; k < n; k++) 
+        {
+	    pos = smallest(arr, k, n);
+	    temp = arr[k];
+	    arr[k] = arr[pos];
+	    arr[pos] = temp;
 	}
 	return 0;
 }  
