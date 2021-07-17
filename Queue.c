@@ -34,13 +34,13 @@ int main()
 }
 int insert()
 {
-    int item;
+    int num;
     if (rear==MAX-1)
        printf("OVERFLOW\n");
     else
     {
         printf("Enter the element to insert:");
-        scanf("%d",&item);
+        scanf("%d",&num);
         if (front==-1 && rear==-1)
         {
             front=0;
@@ -50,7 +50,7 @@ int insert()
         {
             rear=rear+1;
         }
-        queue[rear]=item;
+        queue[rear]=num;
     }
     
     return 0;
